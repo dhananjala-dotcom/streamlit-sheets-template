@@ -39,9 +39,17 @@ If your data is private, skip this and use step 3 instead.
    https://docs.google.com/spreadsheets/d/e/2PACX-1vXXXXXXXXXX.../pub?output=csv
    ```
 
-6. In your fork, open [`step2-read-public-sheet/app.py`](../step2-read-public-sheet/app.py) (use the pencil ✏️ or press `.` for github.dev).
-7. Replace the placeholder `SHEET_CSV_URL = "..."` near the top with your URL.
-8. Commit. Streamlit Cloud redeploys; your dashboard now reads from your sheet.
+6. Copy the URL it gives you.
+7. Open your deployed step 2 app and paste it into the **Google Sheet URL** box at the top. The dashboard loads straight away — no source editing, no commit, no redeploy.
+
+## Simpler alternative: just share the link
+
+You don't have to publish-to-web at all. The step 2 app also accepts a normal sheet link:
+
+1. **File → Share → Share with others**, set **Anyone with the link → Viewer**, then **Copy link**.
+2. Paste that link (the ordinary `…/spreadsheets/d/<id>/edit?gid=…` URL) into the app's **Google Sheet URL** box.
+
+The app pulls the spreadsheet id and tab (`gid`) out of the link and builds the CSV URL itself. Same privacy caveat applies — *anyone with the link can read every cell.*
 
 ## Updating the data
 

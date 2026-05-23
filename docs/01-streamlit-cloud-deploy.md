@@ -42,4 +42,4 @@ You'll end up with up to four Streamlit Cloud apps all pointing at the same fork
 - **`ModuleNotFoundError`** — check that the library is listed in [`requirements.txt`](../requirements.txt) at the repo root.
 - **App stuck on "Your app is in the oven"** — usually a build error. Open **Manage app → Logs**.
 - **Step 3 says `KeyError: 'gcp_service_account'`** — secrets aren't pasted yet. Open **App settings → Secrets** and paste the TOML.
-- **Step 2 shows the "Setup needed" message** — you haven't replaced `SHEET_CSV_URL` in `step2-read-public-sheet/app.py`. See [`02-publish-sheet-to-web.md`](02-publish-sheet-to-web.md).
+- **Step 2 says "Paste a Google Sheet URL" or won't load** — paste a public sheet link into the **Google Sheet URL** box at the top of the app. The sheet must be published-to-web or shared "Anyone with the link". See [`02-publish-sheet-to-web.md`](02-publish-sheet-to-web.md).

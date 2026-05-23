@@ -41,11 +41,11 @@ That's the whole edit loop. The login gate, gspread connection, caching, and dep
 
 1. Make a new Google Sheet, header row: `timestamp | book | pages_read | mood`.
 2. Add a few rows; publish to web as CSV ([`02-publish-sheet-to-web.md`](02-publish-sheet-to-web.md)).
-3. In [`step2-read-public-sheet/app.py`](../step2-read-public-sheet/app.py):
-   - Replace `SHEET_CSV_URL` with your new URL.
+3. Paste your new sheet's URL into the running app's **Google Sheet URL** box — no source edit needed for the URL itself.
+4. In [`step2-read-public-sheet/app.py`](../step2-read-public-sheet/app.py), adapt the dashboard to the new schema:
    - Change the filter widgets: instead of `rating_min/max` and `workshop_search`, add a date-range picker on `timestamp` and a multiselect on `mood`.
    - Replace the rating bar chart with a bar chart of `pages_read` grouped by `book`.
    - Keep the "submissions per day" line chart — it now shows your reading volume over time.
-4. Commit. Done.
+5. Commit. Done.
 
 The structure of the file (cached loader → filters → KPIs → charts → raw table) is the part you keep; the specifics adapt.
